@@ -1,1 +1,3 @@
-# TallerDeProgramacion1-Final
+# Taller De Programacion 1 - Final - Veiga
+
+🍾 Finales resueltos
