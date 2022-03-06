@@ -21,7 +21,33 @@ Declare una clase a elección considerando:
 <details>
 <summary> Respuesta </summary>
 
+Un functor es un objeto que tiene sobrecargado el operador *()*. De esta manera, puede actuar como lo haría una función.
+A diferencia de una función convencional, permite hacer en dos momentos distintos o desacoplar el momento en que se realiza el pasaje de parámetros y en que comienza la ejecución de la función.
 
+```c
+
+// functor
+class incrementador {
+    private:
+        int num;
+    public:
+        incrementar(int n) : num(n) {}
+    
+        int operator () (int arr_num) const {
+            return num + arr_num
+        }
+};
+    
+int main()
+{
+    int arr[] = {1, 2, 3, 4, 5};
+    
+  
+    for (int i: numbers)
+        incrementador(i);
+}
+    
+```
 </details>
 
 ## Ejercicio 3
@@ -52,7 +78,8 @@ int b(){
 <details>
 <summary> Respuesta </summary>
 
-
+a es la declaración de un entero de alcance local. 
+    
 </details>
 
 ## Ejercicio 5
