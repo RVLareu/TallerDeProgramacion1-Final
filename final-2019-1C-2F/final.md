@@ -133,7 +133,7 @@ su suma. Esta función sólo debe ser visible en el módulo donde se la define.
 <details>
 <summary> Respuesta </summary>
 
-`sizeof` arroja la cantidad de bytes del parámetro. Generalmente ``sizeof(int) = 4` pero depende de la arquitectura y del compilador. Si nos quisieramos asegurar de esto, se podría usar `int32_t`
+`sizeof` arroja la cantidad de bytes del parámetro. Generalmente `sizeof(int) = 4` pero depende de la arquitectura y del compilador. Si nos quisieramos asegurar de esto, se podría usar `int32_t`
   
 </details>
 
@@ -147,6 +147,7 @@ a eventos y, en particular, en entornos de interfaz gráfica (GUIs).
  El event loop es el encargado de leer los eventos de la cola y distribuir las tareas a los *handlers* correspondientes. Estos últimos son secciones de código que saben cómo responder a la aparicion de un evento. En entornos de interfaz gráfica, estos *handlers* deben ser compactos y rápidos. En general en este tipo de aplicaciones, el event loop corre en el hilo principal del programa
 
 </details>
+
 ## Ejercicio 10
 ¿Qué ventaja ofrece un lock raii frente al tradicional lock/unlock?
 
