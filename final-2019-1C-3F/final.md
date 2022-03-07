@@ -78,7 +78,15 @@ int b(){
 <details>
 <summary> Respuesta </summary>
 
-a es la declaración de un entero de alcance local. 
+`static int a` es la declaración de un entero de alcance local (solo se la puede accerder desde donde fue declarada). No posee ningún valor ya que al ser una declaración no se reserva memoria para la misma. Por esta misma razón no reside en ningún segmento de memoria
+</br>
+`int b()` es la definición de una función que no recibe ningún parámetro y devuelvo un entero. El área de memoria donde reside es el datasegment
+</br>
+`static int c` es la declaracion de un entero de alcance local (la función en este caso). Su lifetime es global
+</br>
+`char d=65` es la definicion de un char con el valor correspondiente al 65 en la tabla *ascii*. Al ser una variable local, esta reside en el stack y es liberada al salir de la ejecución  de la función `b()`
+</br>
+
     
 </details>
 
@@ -100,6 +108,7 @@ un .h y .o/.obj?.
 <details>
 <summary> Respuesta </summary>
 
+Los templates permiten realizar generalizaciones, generando código de acuerdo al tipo de dato que se indique. Es por esto que debe ser conocido en tiempo de compilación, para que luego de acuerdo al tipo de dato se genere el código objeto (.O) correspondiente. De esta manera se generará el mismo código tantas veces como tipos de datos sean necesarios/especializados.
 
 </details>
 
@@ -110,6 +119,11 @@ un .h y .o/.obj?.
 <details>
 <summary> Respuesta </summary>
 
+Para que un compilador C sea portable debe:
+* Respetar sintaxis
+* Proveer conjunto de librerías estandar (stdlib, stdio, etc)
+* Respetar un procesos de transformacion de código desde el fuente hasta el ejecutable final
+    
 
 </details>
 
@@ -146,5 +160,6 @@ Ejemplifique.
 <details>
 <summary> Respuesta </summary>
 
+En C++ todos los objetos son copiables por default, de esta manera al realizar un pasaje de objetos por copia se estarán duplicando bit a bit de manera naive. Un potencial problema es si el objeto original posee un puntero, el objeto destino copiará el puntero por lo que si el original libero el contenido, el puntero del objeto destino no será válido. En el caso de realizarlo por movimiento, el objeto fuente ya no es dueño del recurso: se cambia el ownership. Igualmente el objeto fuente debe seguir siendo válido. Volviendo al caso del puntero, para quitarle el ownership al objeto origen habria que por ejemplo hacer que apunte a null: `ptr = nullptr`
 
 </details>
