@@ -10,6 +10,32 @@ Constructor(unsigned long), Constructor default y Constructor move; Operador <<,
 <details>
 <summary> Respuesta </summary>
 
+```c
+#ifndef __NUMERO_H__
+#define __NUMERO_H__
+  
+class Numero {
+  private:
+    unsigned long nro;
+  public:
+    Numero(unsigned long  nro);
+    Numero(const Numero& otro); //constructor por copia o default
+    Numero(Numero&& otro); //constructor por movimiento
+    
+    std::istream operator>>(std::stream & in, Numero& nro);
+    std::ostream operator<<(std::stream & out, const Numero& nro);
+  
+    Numero& operator=(Numero& otro); // asignacion por copia
+    Numero& operator=(Numero&& otro); // asignacion por movimiento
+  
+    Numero& operator++(int);
+    operator long() const;    
+  
+};
+  
+#endif
+  
+```
 
 </details>
 
