@@ -82,7 +82,7 @@ int b(){
 </br>
 `int b()` es la definición de una función que no recibe ningún parámetro y devuelvo un entero. El área de memoria donde reside es el datasegment
 </br>
-`static int c` es la declaracion de un entero de alcance local (la función en este caso). Su lifetime es global
+`static int c` es la **definición** de un entero de alcance local (la función en este caso). Su lifetime es global. No se encuentra inicializada. Declaración sería si fuera extern, ua que no sabes donde se aloja.
 </br>
 `char d=65` es la definicion de un char con el valor correspondiente al 65 en la tabla *ascii*. Al ser una variable local, esta reside en el stack y es liberada al salir de la ejecución  de la función `b()`
 </br>
