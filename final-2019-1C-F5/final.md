@@ -121,7 +121,27 @@ hexadecimales de 4 símbolos y reemplazarlos por su valor decimal (en texto).
 
 <details>
 <summary> Respuesta</summary>
+  
+El polimorfismo significa que la misma llamada a función tiene distintos comportamientos dependiendo del tipo del objeto, no queremos que dependa del tipo de la variable.
+Por defecto, C++ resuelve a qué método llamar en tiempo de compilación. 
 
+  </br>
+![image](https://user-images.githubusercontent.com/71232328/157701302-e72d0508-7853-4c28-8bee-5629b99ce24c.png)
+
+</br>
+
+Para que se resuelva en tiempo de ejecución hay que anteponer el modificador virtual
+</br>
+
+![image](https://user-images.githubusercontent.com/71232328/157701907-e460df29-3fad-4156-9d35-6b83145219cb.png)
+
+</br> 
+
+De la misma manera, si realizamos un delete se invocará al del base si no le anteponemos el modificador virtual, ya que se definió en tiempo de compilación. Si ponemos virtual y tenemos clase base y derivada se llamará:
+1. Constructor Base
+2. Constructor Derivada
+3. Destructor Derivada
+4. Destructor Base
 
 </details>
 
@@ -134,6 +154,7 @@ código.
 <details>
 <summary> Respuesta</summary>
 
+La función que se utiliza para esperar la terminación de un thread es join(). Esta función frena el flujo de ejecución del hilo que la ejecuta a la espera de que el hilo a joinear vuelve. A continuación el hilo pasa a ser no joineable y es posible destruirlo de manera segura.
 
 </details>
 
