@@ -6,6 +6,17 @@ sucesión de números recibidos como texto, en decimal, separados por comas y te
 con un signo igual (ej: “27,12,32=”). Al recibir el texto ‘FIN’ debe finalizar el programa
 ordenadamente liberando los recursos.
 */
+#include <stdio.h>
+
+#include <stddef.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+
+#include <netdb.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main(int argc, char* argv[]) {
     

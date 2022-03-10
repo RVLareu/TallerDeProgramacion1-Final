@@ -4,6 +4,9 @@ El procesamiento consiste en leer grupos de 4 caracteres hexadecimales y reempla
 (que representen el mismo número leído pero en decimal).
 */
 
+#include <stdio.h>
+
 int main(int argc, char* argv[]) {
-    
+    FILE* fp;
+    fp = fopen("numeros.txt", "r+");
 }
